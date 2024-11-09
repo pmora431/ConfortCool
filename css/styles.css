@@ -1,0 +1,181 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes específicos para la versión móvil */
+@media (max-width: 991px) {
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../img/banner.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen en la sección */
+    color: white; /* Color del texto */
+    padding: 100px 0; /* Espaciado superior e inferior */
+    position: relative; /* Necesario para la superposición si agregamos un overlay */
+}
+
+/* Overlay oscuro para opacar la imagen */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
+    z-index: 1; /* Pone el overlay por debajo del texto */
+}
+
+/* Texto sobre el overlay */
+.hero .container {
+    position: relative; /* Necesario para que el texto esté por encima del overlay */
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+}
+
+/* Estilo para el título y texto */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Reducir el tamaño del texto */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Estilo de las tarjetas */
+.card {
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Efecto de transformación al hacer hover */
+}
+
+/* Contenedor de imagen dentro de la tarjeta */
+.card-img-container {
+    position: relative;
+    width: 100%; /* Hace que el contenedor ocupe el 100% del ancho de la tarjeta */
+    height: 200px; /* Altura fija para todas las imágenes */
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+/* Imagen dentro de la tarjeta */
+.card-img-container img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura disponible */
+    object-fit: contain; /* Ajusta la imagen al contenedor sin recortes */
+    object-position: center; /* Centra la imagen si es más pequeña que el contenedor */
+}
+
+/* Efecto al hacer hover sobre la tarjeta */
+.card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+}
+
+/* Asegurar que las imágenes mantengan proporciones al tamaño del card */
+.card-body {
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la nueva sección de servicios */
+#servicios {
+    padding: 40px 0;
+}
+
+/* Estilos para las tarjetas de servicios */
+.servicio-card {
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+    height: 100%; 
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px); /* Efecto hover para elevar la tarjeta */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+}
+
+.servicio-card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente dentro de la tarjeta */
+    height: 100%;
+}
+
+.servicio-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.servicio-card-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Responsividad: para pantallas pequeñas, las tarjetas ocuparán todo el ancho */
+@media (max-width: 768px) {
+    .servicio-card {
+        margin-bottom: 20px;
+    }
+
+    .servicio-card {
+        margin: 10px; /* Agregar margen alrededor de cada tarjeta */
+    }
+}
+
+body {
+    background-color: #f4f4f4;
+}
+.container {
+    margin-top: 50px;
+}
